@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Consulting | Cyberkombinat </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <nav>
-        <div class="logo">Security.Ops</div>
-        <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#disclaimer">Disclaimer</a></li>
-            <li><button id="theme-toggle" aria-label="Toggle Theme">Modus</button></li>
-        </ul>
-    </nav>
-</header>
-
+---
+layout: default
+---
 <main>
     <section class="hero">
         <h1>Sichere Infrastruktur.<br>Automatisiert & Robust.</h1>
@@ -32,47 +12,27 @@
         <div class="service-grid">
             <div class="card">
                 <h3>Unix/Linux Hardening</h3>
-                <p>Sicherheitsoptimierung von Unix- und Linux-Endpunkten zur Minimierung der Angriffsfläche und Stärkung der Systemintegrität. Umfasst Konfigurationsaudits, Patch-Management, Prüfung der Zugriffskontrollen und Implementierung von Best Practices.</p>
+                <p>Sicherheitsoptimierung zur Minimierung der Angriffsfläche und Stärkung der Systemintegrität (Audits, Patch-Management).</p>
             </div>
             <div class="card">
                 <h3>Security Architecture Review</h3>
-                <p>Evaluierung Ihrer Sicherheitsarchitektur zur Gewährleistung der Konformität mit Industriestandards. Beinhaltet Threat Modeling, Design-Analyse und Handlungsempfehlungen zur Optimierung Ihres Sicherheitsniveaus.</p>
+                <p>Evaluierung Ihrer Sicherheitsarchitektur inklusive Threat Modeling und Design-Analyse nach Industriestandards.</p>
             </div>
             <div class="card">
                 <h3>Consulting</h3>
-                <p>Frühzeitige Integration robuster Sicherheitsarchitekturen in Ihren Projektlebenszyklus. Dies steigert die betriebliche Sicherheit und Effizienz, senkt langfristige Wartungskosten und erhöht die Flexibilität für künftige Anpassungen.</p>
+                <p>Frühzeitige Integration robuster Sicherheitsarchitekturen für betriebliche Effizienz und reduzierte Wartungskosten.</p>
             </div>
         </div>
     </section>
 
     <section id="kontakt" class="contact">
         <h2>Anfrage Service</h2>
-        <p>Lassen Sie uns über Ihr nächstes Sicherheitsprojekt sprechen. Senden Sie mir einfach eine E-Mail mit Ihrem Anliegen.</p>
-        <a href="mailto:info@cyberkombinat.com" class="cta-link">Jetzt Kontakt aufnehmen</a>
+        <p>Lassen Sie uns über Ihr nächstes Sicherheitsprojekt sprechen.</p>
+        <a href="mailto:info@ihredomain.de" class="cta-link">Jetzt Kontakt aufnehmen</a>
     </section>
 
     <section id="about" class="about">
         <h2>Über mich</h2>
-        <p>IT-Sicherheit ist für mich kein reiner Compliance-Prozess – sie ist das Ergebnis einer tiefgreifenden Systemkenntnis.</p>
-        <div class="about-content">
-            <p>Mit über <strong>15 Jahren Erfahrung im Unix/Linux-Betrieb</strong> kenne ich die Systeme nicht nur von der Oberfläche, sondern bis tief in den Kernel und die Konfigurationsschichten. Dieses tiefgehende technische Verständnis bildet das Fundament meiner Arbeit.</p>
-            <p>Seit über <strong>8 Jahren</strong> spezialisiere ich mich auf den Bereich Cybersecurity. Mein Ansatz verbindet operative Exzellenz mit konsequenter Sicherheitsarchitektur. Ich implementiere Lösungen, die nicht nur sicher sind, sondern auch stabil laufen und sich effizient verwalten lassen – sei es durch Automatisierung mit Ansible oder durch die strategische SIEM-Integration.</p>
-        </div>
+        <p>Mit <strong>15 Jahren Erfahrung im Unix/Linux-Betrieb</strong> und <strong>8 Jahren im Bereich Cybersecurity</strong> verbinde ich operative Exzellenz mit konsequenter Sicherheitsarchitektur. Ich implementiere Lösungen, die stabil laufen und sicher sind.</p>
     </section>
 </main>
-
-<footer id="disclaimer">
-    <p>&copy; 2026 cyberkombinat.com | <a href="#">Impressum & Disclaimer</a></p>
-</footer>
-
-<script>
-    const toggle = document.getElementById('theme-toggle');
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-    toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-</script>
-
-</body>
-</html>

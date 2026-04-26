@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Consulting</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">Security.Ops</div>
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="https://github.com/IHRE_GITHUB_URL" target="_blank">GitHub</a></li>
+            <li><button id="theme-toggle">Modus</button></li>
+        </ul>
+    </nav>
+</header>
+
+{{ content }}
+
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+</script>
+</body>
+</html>
