@@ -3,68 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberkombinat | IT-Sicherheit & Automatisierung</title>
+    <title>Security Consulting | Ihr Name</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <nav>
-        <div class="logo">Security Consulting</div>
-        <ul>
-            <li><a href="#services">Leistungen</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
+        <div class="logo">Security.Ops</div>
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+        </div>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Sichere Infrastruktur. Automatisiert.</h1>
-    <p>Von der Härtung Ihrer Linux-Systeme bis zum vollständigen SIEM-Betrieb – ich mache Ihre IT resilient.</p>
-    <a href="#kontakt" class="cta-button">Jetzt anfragen</a>
-</section>
+<main>
+    <section class="hero">
+        <h1>Sichere Infrastruktur.<br>Automatisiert & Robust.</h1>
+        <p>Expertise in Linux-Härtung, SIEM-Operations (Splunk, Wazuh) und sichere Deployment-Automatisierung mit Ansible.</p>
+        <a href="#kontakt" class="cta">Projektanfrage</a>
+    </section>
 
-<section id="services" class="services">
-    <h2>Leistungen</h2>
-    <div class="service-grid">
-        <div class="card">
-            <h3>Sicherheitskonzepte</h3>
-            <p>Ganzheitliche Sicherheitsstrategien und Bedrohungsanalysen für Ihre Infrastruktur.</p>
+    <section id="services" class="services">
+        <h2>Leistungen</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>Linux Hardening</h3>
+                <p>Härtung Ihrer Systeme nach CIS-Benchmarks zur Minimierung der Angriffsfläche.</p>
+            </div>
+            <div class="card">
+                <h3>SIEM & Detection</h3>
+                <p>Wazuh & Splunk Implementierung für tiefgreifende Log-Analyse und Incident Response.</p>
+            </div>
+            <div class="card">
+                <h3>Secure IaC</h3>
+                <p>Sichere Bereitstellung Ihrer Infrastruktur durch validierte Ansible-Playbooks.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Linux Hardening</h3>
-            <p>Minimierung der Angriffsfläche durch gehärtete Linux-Systeme nach CIS Benchmarks.</p>
-        </div>
-        <div class="card">
-            <h3>SIEM & Monitoring</h3>
-            <p>Aufbau und Optimierung von SIEM Lösungen wie Wazuh und Splunk zur zentralen Überwachung.</p>
-        </div>
-        <div class="card">
-            <h3>Secure Deployment</h3>
-            <p>Automatisierte & sichere Bereitstellung von Systemen mittels Ansible und terraform (IaC).</p>
-        </div>
-    </div>
-</section>
+    </section>
+</main>
 
-<section id="expertise" class="expertise-focus">
-    <h2>Technologie-Stack</h2>
-    <p>Ich unterstütze Sie bei der Implementierung dieser Kerntechnologien:</p>
-    <div class="tech-tags">
-        <span class="tag">Splunk</span>
-        <span class="tag">Wazuh</span>
-        <span class="tag">Ansible</span>
-        <span class="tag">Linux (RHEL/Debian)</span>
-        <span class="tag">CIS Benchmarks</span>
-        <span class="tag">Detection Engineering</span>
-    </div>
-</section>
+<footer id="kontakt">
+    <p>Bereit für die Absicherung Ihrer Umgebung?</p>
+    <a href="mailto:info@ihredomain.de">info@ihredomain.de</a>
+</footer>
 
-<section id="kontakt" class="footer">
-    <h2>Kontakt</h2>
-    <p>Bereit für ein erstes Gespräch? Ich freue mich auf Ihre Nachricht.</p>
-    <p>E-Mail: <a href="mailto:info@cyberkombinat.com" style="color: #fff; text-decoration: underline;">info@cyberkombinat.com</a></p>
-</section>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+</script>
 
 </body>
 </html>
