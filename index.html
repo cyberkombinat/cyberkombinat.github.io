@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Consulting | Ihr Name</title>
+    <title>Security Consulting | Cyberkombinat </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,55 +11,66 @@
 <header>
     <nav>
         <div class="logo">Security.Ops</div>
-        <div class="nav-right">
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
-        </div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+            <li><button id="theme-toggle" aria-label="Toggle Theme">Modus</button></li>
+        </ul>
     </nav>
 </header>
 
 <main>
     <section class="hero">
         <h1>Sichere Infrastruktur.<br>Automatisiert & Robust.</h1>
-        <p>Expertise in Linux-Härtung, SIEM-Operations (Splunk, Wazuh) und sichere Deployment-Automatisierung mit Ansible.</p>
-        <a href="#kontakt" class="cta">Projektanfrage</a>
+        <p>Expertise in Linux-Härtung, SIEM-Operations und Architektur-Beratung.</p>
     </section>
 
     <section id="services" class="services">
-        <h2>Leistungen</h2>
+        <h2>Services</h2>
         <div class="service-grid">
             <div class="card">
-                <h3>Linux Hardening</h3>
-                <p>Härtung Ihrer Systeme nach CIS-Benchmarks zur Minimierung der Angriffsfläche.</p>
+                <h3>Unix/Linux Hardening</h3>
+                <p>Sicherheitsoptimierung von Unix- und Linux-Endpunkten zur Minimierung der Angriffsfläche und Stärkung der Systemintegrität. Umfasst Konfigurationsaudits, Patch-Management, Prüfung der Zugriffskontrollen und Implementierung von Best Practices.</p>
             </div>
             <div class="card">
-                <h3>SIEM & Detection</h3>
-                <p>Wazuh & Splunk Implementierung für tiefgreifende Log-Analyse und Incident Response.</p>
+                <h3>Security Architecture Review</h3>
+                <p>Evaluierung Ihrer Sicherheitsarchitektur zur Gewährleistung der Konformität mit Industriestandards. Beinhaltet Threat Modeling, Design-Analyse und Handlungsempfehlungen zur Optimierung Ihres Sicherheitsniveaus.</p>
             </div>
             <div class="card">
-                <h3>Secure IaC</h3>
-                <p>Sichere Bereitstellung Ihrer Infrastruktur durch validierte Ansible-Playbooks.</p>
+                <h3>Consulting</h3>
+                <p>Frühzeitige Integration robuster Sicherheitsarchitekturen in Ihren Projektlebenszyklus. Dies steigert die betriebliche Sicherheit und Effizienz, senkt langfristige Wartungskosten und erhöht die Flexibilität für künftige Anpassungen.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <h2>Anfrage Service</h2>
+        <p>Lassen Sie uns über Ihr nächstes Sicherheitsprojekt sprechen. Senden Sie mir einfach eine E-Mail mit Ihrem Anliegen.</p>
+        <a href="mailto:info@cyberkombinat.com" class="cta-link">Jetzt Kontakt aufnehmen</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Über mich</h2>
+        <p>IT-Sicherheit ist für mich kein reiner Compliance-Prozess – sie ist das Ergebnis einer tiefgreifenden Systemkenntnis.</p>
+        <div class="about-content">
+            <p>Mit über <strong>15 Jahren Erfahrung im Unix/Linux-Betrieb</strong> kenne ich die Systeme nicht nur von der Oberfläche, sondern bis tief in den Kernel und die Konfigurationsschichten. Dieses tiefgehende technische Verständnis bildet das Fundament meiner Arbeit.</p>
+            <p>Seit über <strong>8 Jahren</strong> spezialisiere ich mich auf den Bereich Cybersecurity. Mein Ansatz verbindet operative Exzellenz mit konsequenter Sicherheitsarchitektur. Ich implementiere Lösungen, die nicht nur sicher sind, sondern auch stabil laufen und sich effizient verwalten lassen – sei es durch Automatisierung mit Ansible oder durch die strategische SIEM-Integration.</p>
         </div>
     </section>
 </main>
 
-<footer id="kontakt">
-    <p>Bereit für die Absicherung Ihrer Umgebung?</p>
-    <a href="mailto:info@ihredomain.de">info@ihredomain.de</a>
+<footer id="disclaimer">
+    <p>&copy; 2026 cyberkombinat.com | <a href="#">Impressum & Disclaimer</a></p>
 </footer>
 
 <script>
     const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    // Check localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-    }
-
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
     toggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
 </script>
 
